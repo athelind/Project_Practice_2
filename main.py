@@ -42,15 +42,15 @@ class MobileDataStatistics:
         plt.title("Mobile Usage by Year")
         plt.xlabel("Year")
         plt.ylabel("Volume of Mobile Data")
-        #plt.show()
-        plt.savefig("barchart.png")
+        plt.show()
+        #plt.savefig("barchart.png")
 
     def pieChartByYear(self):
         yearStats = self.mobile.groupby("Year").sum().reset_index()
 
         plt.pie(yearStats["volume_of_mobile_data"], labels=yearStats["Year"])
-        #plt.show()
-        plt.savefig("piechart.png")
+        plt.show()
+        #plt.savefig("piechart.png")
 
     def scatterChart(self):
 
@@ -58,20 +58,20 @@ class MobileDataStatistics:
         plt.title("Mobile Usage by Year")
         plt.xlabel("Year")
         plt.ylabel("Volume of Mobile Data")
-        #plt.show()
-        plt.savefig("scatterchart.png")
+        plt.show()
+        #plt.savefig("scatterchart.png")
 
 
 
 # USE THE FOLLOWING CODE TO TEST YOUR SOLUTION OUT
 
 mds = MobileDataStatistics()
-# mds.viewData()
-# mds.viewUsageByYear(2012)
-#mds.viewTotalUsageByYear(2012)
-#mds.plotLineChartByYear(2012)
-#mds.barChartByYear()
-#mds.pieChartByYear()
+mds.viewData()
+mds.viewUsageByYear(2012)
+mds.viewTotalUsageByYear(2012)
+mds.plotLineChartByYear(2012)
+mds.barChartByYear()
+mds.pieChartByYear()
 mds.scatterChart()
 
 
